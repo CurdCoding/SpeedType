@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+*{
+  font-family: Montserrat;
+}
+body {
+  background-color: rgb(253,2,102);
+  margin: 0;
+  padding: 0;
+}
+.navigation {
+  height: 55px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-family: Montserrat;
+  margin-bottom: 10px;
+}
+.login,
+.signup {
+  position: absolute;
+  margin-left: 88%;
+  margin-top: 12px;
+  border: none;
+  background-color: white;
+  color: rgb(253,2,102);
+  font-size: 16px;
+  height: 38px;
+  cursor: pointer;
+  transition: 0.15 background-color;
+  font-weight: 500;
+}
+.signup {
+  margin-left: 93%;
+}
+.name{
+  color: rgb(253,2,102);
+  font-weight: bold;
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 19px;
+  font-size: 18px;
+}
+.signup:hover,.login:hover,.start:hover {
+  text-decoration-line: underline;
+  text-decoration-color: rgb(253,2,102) ;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 5px;
+}
+.intro {
+  color: white;
+  font-family: Montserrat;
+  padding-left: 20px;
+  width: 95%;
+}
+.introcontainer{
+  height: 100px;
+  width: 98%;
+  background-color: rgb(253,2,102);
+  border-radius: 20px;
+  padding-top: 3px;
+}
+.donation{
+  height: 400px;
+  width: 500px;
+  background-color: white;
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 5%;
+  border-radius: 30px;
+}
+.subscriptionHeading{
+  color: rgb(253,2,102);
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.planOne,.planTwo{
+  background-color: white;
+  border: solid;
+  border-color: rgb(253,2,102);
+  height: 300px;
+  width: 200px;
+  margin-left: 30px;
+  margin-top: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.firstItem,.secondItem,.thirdItem,.fourthItem{
+  position: absolute;
+  margin-top: -110px;
+  margin-left: -20px;
+  color: rgb(253,2,102);
+
+}
+.secondItem{
+  margin-top: -80px;
+}
+.thirdItem{
+  margin-top: -50px;
+}
+.fourthItem{
+  margin-top: -20px;
+}
+.planName{
+  color: rgb(253,2,102);
+  position: absolute;
+  margin-top: -130px;
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.planPrice{
+  color: rgb(253,2,102);
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.planOne:hover,.planTwo:hover{
+  border-color: black;
+}
+.testEncourage{
+  height: 400px;
+  width: 800px;
+  background-color: white;
+  color: rgb(253,2,102);
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-top: 1%;
+  border-radius: 10px;
+}
+.startTest{
+  height: 40px;
+  width: 120px;
+  background-color: rgb(253,2,102);
+  color: white;
+  border: none;
+  margin-top: 10%;
+  margin-left: 40%;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.startTest:hover{
+  border: solid;
+  border-color: black;
+}

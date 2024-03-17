@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing test</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="center">
+        <p class="text"></p>
+        <textarea class="userInput"></textarea>
+    </div>
+</body>
+</html>
+<script>
+    let listOfWords = [
+  "apple", "banana", "orange", "grape", "pineapple", "strawberry", "kiwi", "blueberry", "watermelon", "mango",
+  "carrot", "broccoli", "spinach", "lettuce", "cucumber", "potato", "tomato", "onion", "garlic", "pepper",
+  "cat", "dog", "rabbit", "hamster", "guinea pig", "goldfish", "parrot", "turtle", "frog", "snake",
+  "table", "chair", "sofa", "bed", "desk", "bookshelf", "wardrobe", "mirror", "lamp", "rug",
+  "car", "bicycle", "motorcycle", "bus", "train", "truck", "boat", "airplane", "helicopter", "rocket",
+  "computer", "keyboard", "mouse", "monitor", "printer", "scanner", "router", "speaker", "headphones", "microphone",
+  "phone", "tablet", "smartwatch", "camera", "television", "projector", "glasses", "pen", "pencil", "marker",
+  "shirt", "pants", "dress", "skirt", "jacket", "coat", "sweater", "hat", "scarf", "gloves",
+  "shoes", "boots", "sandals", "slippers", "socks", "tie", "belt", "wallet", "purse", "backpack",
+  "sun", "moon", "star", "cloud", "rain", "snow", "wind", "storm", "rainbow", "lightning",
+  "mountain", "hill", "valley", "river", "lake", "ocean", "beach", "island", "forest", "desert",
+  "house", "apartment", "castle", "cabin", "tent", "barn", "church", "school", "hospital", "library",
+  "pizza", "hamburger", "sandwich", "hotdog", "spaghetti", "sushi", "taco", "burrito", "salad", "soup",
+  "cake", "cookie", "cupcake", "ice cream", "pie", "donut", "chocolate", "candy", "popcorn", "pretzel",
+  "fire", "water", "earth", "air", "light", "sound", "energy", "power", "time", "space",
+  "love", "hate", "fear", "joy", "sadness", "anger", "surprise", "disgust", "trust", "hope",
+  "red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "black", "white",
+  "happy", "sad", "angry", "tired", "excited", "bored", "hungry", "thirsty", "sleepy", "awake",
+  "big", "small", "fast", "slow", "hot", "cold", "loud", "quiet", "strong", "weak",
+  "old", "new", "young", "long", "short", "thick", "thin", "hard", "soft", "smooth",
+  "round", "square", "triangle", "rectangle", "circle", "heart", "star", "diamond", "arrow", "cross"
+];
+let theSentence = "";
+let correct = 0, incorrect = 0;
+let words = new Array(100);
+let userWords = new Array(100);
+let no = 0;
+let totalTime = 0, endTime = 0, startTime = 0;
+ startTime = new Date();
+ let text = document.querySelector('.text');
+ for(let i = 0; i < 100; i++){
+    let random = Math.round(Math.random()*199);
+        words[i] = listOfWords[random];
+        theSentence = theSentence + listOfWords[random] + ' ';
+    }
+    text.innerHTML = theSentence;
+function testExecutor(){
+    let userInput = document.querySelector('.userInput').value;
+    userInput = userInput + ' ';
+    let length = userInput.length;
+    let x = 0;
+    let y = 0;
+    for(let k = 0; k < length; k++){
+        if(userInput.charAt(k) == ' '){
+            userWords[y++] = userInput.substring(x,k);
+            x = k++;
+            no++;
+        }
+    }
+    for(let j = 0; j < no; j++){
+        if(words[j] == userWords[j].trim())
+        correct++;
+    else
+    incorrect++;
+    }
+    let Accuracy = ((correct/(correct+incorrect))*100);
+    alert('Words per minute: '+no+'\nAccuracy: '+Accuracy+"%");
+    document.querySelector('.userInput').value = '';
+    }
+    
+
+setInterval(testExecutor,60000);
+</script>
